@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Disruption" type="DisruptionType"/>
+  <xs:complexType name="CauseAreaType">
+    <xs:sequence>
+      <xs:element type="DisplayPointType" name="DisplayPoint"/>
+      <xs:element type="StreetsType" name="Streets"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PointType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="coordinatesEN"/>
+      <xs:element type="xs:string" name="coordinatesLL"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DisruptionType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="status"/>
+      <xs:element type="xs:string" name="severity"/>
+      <xs:element type="xs:string" name="levelOfInterest"/>
+      <xs:element type="xs:string" name="category"/>
+      <xs:element type="xs:string" name="subCategory"/>
+      <xs:element type="xs:string" name="startTime"/>
+      <xs:element type="xs:string" name="endTime"/>
+      <xs:element type="xs:string" name="location"/>
+      <xs:element type="xs:string" name="corridor"/>
+      <xs:element type="xs:string" name="comments"/>
+      <xs:element type="xs:string" name="currentUpdate"/>
+      <xs:element type="xs:string" name="remarkTime"/>
+      <xs:element type="xs:string" name="lastModTime"/>
+      <xs:element type="CauseAreaType" name="CauseArea"/>
+    </xs:sequence>
+    <xs:attribute type="xs:string" name="id"/>
+  </xs:complexType>
+  <xs:complexType name="StreetsType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="StreetType" name="Street"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="LinkType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="toid"/>
+      <xs:element type="LineType" name="Line"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="StreetType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="name"/>
+      <xs:element type="xs:string" name="closure"/>
+      <xs:element type="xs:string" name="directions"/>
+      <xs:element type="LinkType" name="Link" maxOccurs="unbounded" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DisplayPointType">
+    <xs:sequence>
+      <xs:element type="PointType" name="Point"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LineType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="coordinatesEN"/>
+      <xs:element type="xs:string" name="coordinatesLL"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

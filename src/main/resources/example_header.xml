@@ -1,0 +1,18 @@
+<Header>
+    <Identifier>Transport for London | Live Traffic Disruptions</Identifier>
+    <DisplayTitle>Transport for London | Traffic Information Management System (TIMS) Feed</DisplayTitle>
+    <Version>2.0</Version>
+    <PublishDateTime canonical="2016-04-24T10:32:00Z">Sunday, 24 Apr 2016 11:32:00 +01:00</PublishDateTime>
+    <Author>digital@tfl.gov.uk</Author>
+    <Owner>Transport for London</Owner>
+    <RefreshRate>5</RefreshRate>
+    <Max_Latency>30</Max_Latency>
+    <TimeToError>30</TimeToError>
+    <Schedule>Every 5 minutes</Schedule>
+    <Attribution>
+        <Url>http://www.tfl.gov.uk/</Url>
+        <Text>(c) Transport for London</Text>
+        <Logo>http://www.tfl.gov.uk/tfl-global/images/roundel.gif</Logo>
+    </Attribution>
+    <Language>EN</Language>
+</Header>
